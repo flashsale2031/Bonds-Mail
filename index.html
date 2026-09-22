@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bonds Mail</title><link rel="stylesheet" href="bondsmail.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+  <div class="brand"><span class="brand-mark">B</span><span>Bonds Mail</span></div>
+  <div class="search"><span>⌕</span><input id="globalSearch" placeholder="Search mail and people" autocomplete="off"></div>
+  <div class="top-actions"><button class="icon-btn" id="helpBtn" title="Help">?</button><button class="avatar">BM</button></div>
+</header>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <button class="compose" id="composeBtn">＋ <span>New mail</span></button>
+    <nav aria-label="Folders">
+      <a class="folder active" data-folder="inbox" href="inbox.html">▣ <span>Inbox</span><b id="inboxCount">0</b></a>
+      <a class="folder" data-folder="favorites" href="favorites.html">☆ <span>Favorites</span></a>
+      <a class="folder" data-folder="sent" href="sent.html">↗ <span>Sent</span></a>
+      <a class="folder" data-folder="drafts" href="drafts.html">□ <span>Drafts</span><b id="draftCount">0</b></a>
+      <a class="folder" data-folder="promotions" href="promotions.html">◇ <span>Promotions</span></a>
+      <a class="folder" data-folder="allmail" href="allmail.html">✉ <span>All mail</span></a>
+      <a class="folder" data-folder="spam" href="spam.html">⚠ <span>Spam</span></a>
+      <a class="folder" data-folder="trash" href="trash.html">♜ <span>Trash</span></a>
+    </nav>
+    <div class="sidebar-bottom"><button class="folder" id="settingsBtn">⚙ <span>Settings</span></button></div>
+  </aside>
+  <main class="shell">
+    <section class="welcome-card">
+      <div><p class="eyebrow">BONDS MAIL</p><h1>Mail, organized your way.</h1><p>Open a folder to manage messages, or start a new message.</p></div>
+      <a class="primary-link" href="inbox.html">Open Inbox →</a>
+    </section>
+    <section class="quick-grid">
+      <a href="inbox.html" class="quick-card"><strong>Inbox</strong><span id="homeInbox">0 messages</span></a>
+      <a href="drafts.html" class="quick-card"><strong>Drafts</strong><span id="homeDrafts">0 messages</span></a>
+      <a href="sent.html" class="quick-card"><strong>Sent</strong><span>View sent mail</span></a>
+      <a href="allmail.html" class="quick-card"><strong>All mail</strong><span>Everything in one place</span></a>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="bondsmail.js"></script>
+</body></html>

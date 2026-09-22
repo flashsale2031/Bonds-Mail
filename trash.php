@@ -1,0 +1,1 @@
+<?php header('Content-Type: application/json; charset=utf-8');$f=__DIR__.'/data/trash.json';if($_SERVER['REQUEST_METHOD']==='DELETE'){file_put_contents($f,'[]',LOCK_EX);echo json_encode(['ok'=>true]);exit;}echo json_encode(file_exists($f)?json_decode(file_get_contents($f),true):[]);?>

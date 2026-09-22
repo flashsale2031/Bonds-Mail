@@ -1,0 +1,1 @@
+<?php header('Content-Type: application/json; charset=utf-8'); $f=__DIR__.'/data/promotions.json'; echo json_encode(file_exists($f)?json_decode(file_get_contents($f),true):[]); ?>
